@@ -21,8 +21,8 @@ def getWeather(canvas):
     sunrise = time.strftime("%I:%M:%S", time.gmtime(json_data['sys']['sunrise']-10800))
     sunset = time.strftime("%I:%M:%S", time.gmtime(json_data['sys']['sunrise']-10800))
     
-    final_info = condition + "/n" + str(temp) + "°c"
-    final_data = "/n" + "Max temp:" + str(max_temp) + "/n" + "Min temp:" + str(min_temp) + "/n" + "Pressure:" + str(pressure) + "/n" +"Humidity:" + str(humidity) + "/n" + "Windspeed:" + str(wind) + "/n" + "Sunrise:" + sunrise + "/n" + "Sunset" + sunset
+    final_info = condition + "\n" + str(temp) + "°c"
+    final_data = "\n" + "Max temp:" + str(max_temp) + "\n" + "Min temp:" + str(min_temp) + "\n" + "Pressure:" + str(pressure) + "\n" +"Humidity:" + str(humidity) + "\n" + "Windspeed:" + str(wind) + "\n" + "Sunrise:" + sunrise + "\n" + "Sunset" + sunset
     label1.config(text=final_info)
     label2.config(text=final_data)
     
